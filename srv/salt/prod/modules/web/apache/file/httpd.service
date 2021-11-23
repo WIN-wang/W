@@ -1,0 +1,12 @@
+[Unit]
+Description=Start httpd
+After=network.target 
+
+[Service]
+Type=forking
+ExecStart=/usr/local/apache/bin/apachectl start
+ExecStop=/usr/local/apache/bin/apachectl stop
+ExecReload=/bin/kill -WINCH 
+
+[Install]
+WantedBy=multi-user.target

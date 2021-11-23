@@ -1,0 +1,4 @@
+prod:
+  'node*':
+    - mysql
+    
